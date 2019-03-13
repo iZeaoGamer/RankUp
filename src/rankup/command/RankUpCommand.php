@@ -19,7 +19,7 @@ class RankUpCommand extends Command implements PluginIdentifiableCommand
      */
     public function __construct(RankUp $main)
     {
-        parent::__construct("rankup", "Get all the ranks.", "/rankup", ["ru"]);
+        parent::__construct("prestige", "Get all the Prestiges.", "/prestige", ["pr"]);
         $this->main = $main;
     }
 
@@ -32,7 +32,7 @@ class RankUpCommand extends Command implements PluginIdentifiableCommand
     public function execute(CommandSender $sender, string $label, array $args): bool
     {
         if ($sender instanceof Player && count($args) == 0 || !$sender->hasPermission("rankup.admin")) {
-            if ($sender->hasPermission("rankup.rankup")) {
+            if ($sender->hasPermission("prestige.rankup")) {
                 $nextRank = $this->main->getRankStore()->getNextRank($sender);
                 //$sender->sendMessage($nextRank->getName());
                 if ($nextRank !== false) {
