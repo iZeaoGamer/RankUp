@@ -1,4 +1,4 @@
-name: RankUp
+name: Prestige
 main: rankup\RankUp
 version: 0.4.0
 author: Falkirks
@@ -6,13 +6,13 @@ api: [3.0.0]
 load: POSTWORLD
 softdepend: ["EconomyAPI", "PocketMoney", "PurePerms"]
 permissions:
- rankup:
+ prestige:
   default: true
   children:
-    rankup.rankup:
+    prestige.rankup:
       default: true
       description: Allow ranking up
-    rankup.admin:
+    prestige.admin:
       default: op
       description: Manage RankUp and view statistics
     rankup.groups:
