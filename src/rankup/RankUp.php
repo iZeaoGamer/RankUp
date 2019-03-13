@@ -47,7 +47,7 @@ class RankUp extends PluginBase
         $this->rankStore->loadFromConfig();
 
         $this->rankupCommand = new RankUpCommand($this);
-        $this->getServer()->getCommandMap()->register("rankup", $this->rankupCommand);
+        $this->getServer()->getCommandMap()->register("prestige", $this->rankupCommand);
     }
 
     public function loadRankUpDoesGroups()
